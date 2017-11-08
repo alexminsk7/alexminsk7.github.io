@@ -33,7 +33,7 @@
           <p>Верстка на HTML и CSS <br> Разработка сайтов под ключ</p>
         </div>
       </div>
-      <a class="main-down" href="#portfolio"><i class="icon-down"></i></a>
+      <a class="main-down slowly" href="#portfolio"><i class="icon-down"></i></a>
     </div>
     <div class="portfolio" id="portfolio">
       <div class="contener">
@@ -121,17 +121,13 @@
         });
       });
     </script>
-    <!-- <script> -->
+    <script>
       $(document).ready(function() {
-        // навигация - плавный скроллинг к якорю
+
         $(".slowly").on("click", function (event) {
-        // отменяем стандартную обработку нажатия по ссылке
         event.preventDefault();
-        // забираем идентификатор бока с атрибута href
         var id = $(this).attr('href'),
-        // узнаем высоту от начала страницы до блока на который ссылается якорь
         top = $(id).offset().top;
-        // анимируем переход на расстояние - top а 1500 мс
         $('body,html').animate({scrollTop: top}, 800);
         });
       });
